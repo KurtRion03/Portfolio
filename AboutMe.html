@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="Image/png" href="Image/K__1_-removebg-preview.png" />
+    <link rel="stylesheet" href="AboutMe.css" />
+
+    <!-- Font Awesome Link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="Image/K__1_-removebg-preview.png" alt="Logo" />
+          </a>
+        </div>
+
+        <!-- Hamburger Menu Icon (hidden on desktop) -->
+        <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="nav-links" id="navLinks">
+          <a href="Contact.html">
+            <i class="fa-solid fa-envelope"></i> Contact
+          </a>
+          <a href="Project.html">
+            <i class="fa-solid fa-list-check"></i> Projects
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <h1 class="first-title">About Me</h1>
+
+    <hr class="hr-style" />
+
+    <!-- Container Section -->
+    <div class="container">
+      <div class="left-side">
+        <img src="Image/Cid.png" alt="" />
+      </div>
+
+      <div class="right-side">
+        <h2 class="h2_1"><em>Hello</em>,</h2>
+        <h2 class="h2_2">I'm <em>Kurt</em></h2>
+        <p>
+          Hi, I'm a passionate IT graduate from STI College San Jose Del Monte
+          with a strong foundation in Java, C#, and Python. During my studies, I
+          built 2D and 3D games using Unity, and collaborated through tools like
+          SourceTree, GitHub, Visual Studio, and VS Code. I'm now focusing on
+          front-end web development, currently enhancing my skills in HTML, CSS,
+          and JavaScript while exploring UI/UX design and responsive web
+          practices. As someone who enjoys bringing ideas to life through
+          interactive digital experiences, I'm excited to grow in the web
+          development field. I'm actively looking for opportunities where I can
+          learn, contribute, and continue building real-world projects.
+        </p>
+
+        <div class="resume">
+          <a
+            href="Resume/Kurt Resume.pdf"
+            download="KurtResume.pdf"
+            class="downloadButton"
+            ><i class="fa-solid fa-download"></i>Download My Resume</a
+          >
+        </div>
+
+        <br />
+      </div>
+    </div>
+
+    <div class="contents">
+      <hr />
+      <br />
+
+      <!-- Tab Section -->
+      <div class="tabSection">
+        <p class="tab-links active-link" onclick="openTab(event, 'skills')">
+          <i id="brain-icon" class="fa-solid fa-brain"></i>
+          Skills
+        </p>
+        <p class="tab-links" onclick="openTab(event, 'education')">
+          <i id="graduation-cap-icon" class="fa-solid fa-graduation-cap"></i
+          >Education
+        </p>
+        <p class="tab-links" onclick="openTab(event, 'experience')">
+          <i id="gears-icon" class="fa-solid fa-gears"></i> Experience
+        </p>
+
+        <p class="tab-links" onclick="openTab(event, 'certificates')">
+          <i id="certificate-icon" class="fa-solid fa-certificate"></i>
+          Certificates
+        </p>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="tab-contents active-tab" id="skills">
+        <ul>
+          <li>
+            <span
+              ><i id="laptop-icon" class="fa-solid fa-laptop"></i> UI/UX</span
+            ><br />Web/App Interface Design
+          </li>
+          <li>
+            <span
+              ><i id="code-icon" class="fa-solid fa-code"></i> Web
+              Development</span
+            ><br />
+            HTML, CSS, JavaScript
+          </li>
+          <li>
+            <span
+              ><i id="gamepad-icon" class="fa-solid fa-gamepad"></i> Game
+              Development</span
+            >
+            <br />3D Animation, Game Mechanics, Level Design, Scripting
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-contents" id="education">
+        <ul>
+          <li>
+            <span>
+              <i id="user-grad-icon" class="fa-solid fa-user-graduate"></i> BS
+              Information Technology</span
+            ><br />STI San Jose Del Monte <br />
+            Cum Laude
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-contents" id="experience">
+        <ul>
+          <li>
+            <span
+              ><i id="briefcase-icon" class="fa-solid fa-briefcase"></i> Game
+              Developer Intern</span
+            >
+            <br />Lamina Studios, LCC - 100 N Howard St Ste W, Spokane
+            Washington, USA 99201 br<br />
+            <br />
+            Developed gameplay mechanics, UI elements, and game levels in Unity
+            using C#. Collaborated cross-functionally to enhance user experience
+            and polish game assets.
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-contents" id="certificates">
+        <ul class="certificate-list">
+          <li>
+            <span
+              ><i id="award-icon" class="fa-solid fa-award"></i>Certificate of
+              Completion – Lamina Studios, LCC</span
+            ><br />
+            486-hour Internship Completion (February 17 – May 9, 2025)<br />
+            Given: May 12, 2025
+            <p class="view-link" onclick="toggleImage(this)" data-target="img1">
+              View Certificate
+            </p>
+            <img
+              id="img1"
+              class="certificate-img"
+              src="Image/Certificates/Certificate of Completion (Lamina Studios).png"
+              alt="Certificate Preview"
+            />
+          </li>
+
+          <li>
+            <span
+              ><i id="award-icon" class="fa-solid fa-award"></i>Research
+              Symposium Presenter</span
+            ><br />
+            Hello World: A 2D Cross Platform Java and C# Programming Game<br />
+            STI College San Jose Del Monte<br />
+            Presented: December 2024
+            <p class="view-link" onclick="toggleImage(this)" data-target="img2">
+              View Certificate
+            </p>
+            <img
+              id="img2"
+              class="certificate-img"
+              src=""
+              alt="Certificate Preview"
+            />
+          </li>
+
+          <li>
+            <span
+              ><i id="award-icon" class="fa-solid fa-award"></i>SAP Business
+              One</span
+            ><br />
+            Systems Integration & Architecture Training Course<br />
+            Completed: March 2023
+            <p class="view-link" onclick="toggleImage(this)" data-target="img3">
+              View Certificate
+            </p>
+            <img
+              id="img3"
+              class="certificate-img"
+              src=""
+              alt="Certificate Preview"
+            />
+          </li>
+
+          <li>
+            <span
+              ><i id="award-icon" class="fa-solid fa-award"></i>Course
+              Completion</span
+            ><br />
+            STI College, San Jose del Monte, Bulacan<br />
+            Completed: June 25, 2022
+            <p class="view-link" onclick="toggleImage(this)" data-target="img4">
+              View Certificate
+            </p>
+            <img
+              id="img4"
+              class="certificate-img"
+              src=""
+              alt="Certificate Preview"
+            />
+          </li>
+
+          <li>
+            <span
+              ><i id="award-icon" class="fa-solid fa-award"></i>Completion
+              Award</span
+            ><br />
+            Oracle Academy<br />
+            Completed: June 25, 2022
+            <p class="view-link" onclick="toggleImage(this)" data-target="img5">
+              View Certificate
+            </p>
+            <img
+              id="img5"
+              class="certificate-img"
+              src=""
+              alt="Certificate Preview"
+            />
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Languages Section -->
+    <div class="language-container">
+      <h2 class="second-title">Programming Languages</h2>
+      <br />
+    </div>
+
+    <div class="language-icons">
+      <div class="java">
+        <i class="fa-brands fa-java"><p class="desc">Java</p></i>
+      </div>
+      <div class="python">
+        <i class="fa-brands fa-python"><p class="desc">Python</p></i>
+      </div>
+      <div class="csharp">
+        C# <br />
+        <p class="desc">C Sharp</p>
+      </div>
+      <div class="sql">SQL</div>
+      <div class="html">
+        <i class="fa-brands fa-html5"><p class="desc">HTML</p></i>
+      </div>
+      <div class="js">
+        <i class="fa-brands fa-js"><p class="desc">JavaScript</p></i>
+      </div>
+      <div class="css">
+        <i class="fa-brands fa-css3-alt"><p class="desc">CSS</p></i>
+      </div>
+    </div>
+
+    <!-- Social Section -->
+    <div class="social-containers">
+      <h2>My Socials</h2>
+
+      <div class="social-icons">
+        <a
+          href="https://www.instagram.com/queue_queueee/"
+          rel="noopener"
+          target="_blank"
+          class="instagram"
+          aria-label="Instagram Profile Link"
+          ><i class="fa-brands fa-square-instagram" aria-hidden="true"></i
+        ></a>
+        <a
+          rel="noopener"
+          href="https://www.facebook.com/kurtrion.aquino"
+          target="_blank"
+          class="facebook"
+          aria-label="Facebook Profile Link"
+          ><i class="fa-brands fa-facebook" aria-hidden="true"></i
+        ></a>
+        <a
+          href="https://github.com/KurtRion03"
+          rel="noopener"
+          target="_blank"
+          class="github"
+          aria-label="GitHub Profile Link"
+          ><i class="fa-brands fa-github" aria-hidden="true"></i
+        ></a>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>@kurt portfolio 2025</p>
+    </footer>
+  </body>
+  <script src="Javascript.js"></script>
+</html>

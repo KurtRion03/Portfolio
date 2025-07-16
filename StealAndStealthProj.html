@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="Image/png" href="Image/K__1_-removebg-preview.png" />
+    <link rel="stylesheet" href="StealAndStealthProj.css" />
+
+    <!-- Font Awesome Link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="Image/K__1_-removebg-preview.png" alt="Logo" />
+          </a>
+        </div>
+
+        <!-- Hamburger Menu Icon (hidden on desktop) -->
+        <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="nav-links" id="navLinks">
+          <a href="AboutMe.html"
+            ><i class="fa-solid fa-user-tie"></i>About Me</a
+          >
+          <a href="Contact.html">
+            <i class="fa-solid fa-envelope"></i> Contact
+          </a>
+          <a href="Project.html">
+            <i class="fa-solid fa-list-check"></i> Projects
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="video-section">
+      <div class="video-container">
+        <iframe
+          class="video"
+          src="https://drive.google.com/file/d/1PKtaCAhszkdjQkxG-Y9rdZ5nihpB3IZS/preview"
+          frameborder="0"
+          title="Game Video"
+          allowfullscreen
+          allow="autoplay"
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="info-container">
+      <div class="info-text">
+        <h2 class="Title1">Steal And Stealth</h2>
+        <h2 class="Title2">"In Shadows We Fight, In Silence We Survive"</h2>
+        <p>
+          "Stealth and Steal" is a top-down 2D stealth-action puzzle game
+          developed using Unity during a 486-hour internship at Lamina Studios,
+          LLC. Set in a stylized, war-torn feudal Japan plagued by undead
+          creatures, players take on the role of a loyal ninja under a noble
+          Daimyo's command. Tasked with defending his domain, the ninja must
+          complete a series of high-stakes missions-including rescues, stealth
+          infiltrations, and escape operations while uncovering the dark origins
+          of a mysterious curse. The game emphasizes stealth-based gameplay
+          inspired by titles like Robbery Bob, featuring light and detection
+          mechanics, limited-use weapons, and upgradable shadow skills such as
+          teleportation and distraction clones. Players navigate through 20
+          story-driven levels divided into 3 acts, earning coins to upgrade
+          abilities and tools. With a low-poly 3D cartoon art style, immersive
+          sound design, and engaging enemy types like samurai, undead ghouls,
+          and rival ninjas, "Stealth and Steal" delivers a challenging and
+          atmospheric single-player experience. The project was collaboratively
+          built using tools such as Unity, Blender, SourceTree, and Trello, and
+          was developed by a multidisciplinary team under the name "The Noob
+          Syndicate."
+        </p>
+      </div>
+
+      <div class="Title3">
+        <h2>Languages Used</h2>
+        <div class="csharp">
+          C# <br />
+          <p>C Sharp</p>
+        </div>
+      </div>
+
+      <div class="Title4">
+        <h2>Game Engine Used</h2>
+        <i class="fa-brands fa-unity"><p class="unity-desc">Unity</p></i>
+      </div>
+    </div>
+
+    <div class="info-image-container">
+      <img
+        src="Image/Project2_StealAndStealth/1.png"
+        onclick="openStealAndStealth(this)"
+        alt="Steal and Stealth Image"
+      />
+      <img
+        src="Image/Project2_StealAndStealth/2.png"
+        onclick="openStealAndStealth(this)"
+        alt="Steal and Stealth Image"
+      />
+      <img
+        src="Image/Project2_StealAndStealth/3.png"
+        onclick="openStealAndStealth(this)"
+        alt="Steal and Stealth Image"
+      />
+      <img
+        src="Image/Project2_StealAndStealth/Saturday GameDev Designing Level 2.png"
+        onclick="openStealAndStealth(this)"
+        alt="Steal and Stealth Image"
+      />
+      <img
+        src="Image/Project2_StealAndStealth/Thursday Game Dev.png"
+        onclick="openStealAndStealth(this)"
+        alt="Steal and Stealth Image"
+      />
+      <img
+        src="Image/Project2_StealAndStealth/Tuesday GameDev 4.png"
+        onclick="openStealAndStealth(this)"
+        alt="Steal and Stealth Image"
+      />
+    </div>
+
+    <!-- Hidden overlay for zoom effect -->
+    <div id="imageOverlay" class="hidden"></div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>@kurt portfolio 2025</p>
+    </footer>
+  </body>
+
+  <script src="Javascript.js"></script>
+</html>

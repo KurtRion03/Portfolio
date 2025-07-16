@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="Image/png" href="Image/K__1_-removebg-preview.png" />
+    <link rel="stylesheet" href="HelloWorldProject.css" />
+
+    <!-- Font Awesome Link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="Image/K__1_-removebg-preview.png" alt="Logo" />
+          </a>
+        </div>
+
+        <!-- Hamburger Menu Icon (hidden on desktop) -->
+        <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="nav-links" id="navLinks">
+          <a href="AboutMe.html"
+            ><i class="fa-solid fa-user-tie"></i>About Me</a
+          >
+          <a href="Contact.html">
+            <i class="fa-solid fa-envelope"></i> Contact
+          </a>
+          <a href="Project.html">
+            <i class="fa-solid fa-list-check"></i> Projects
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="video-section">
+      <div class="video-container">
+        <iframe
+          class="video"
+          src="https://drive.google.com/file/d/151lph_ZsbBtpmYkOdu5aeguLlSme9gC4/preview"
+          frameborder="0"
+          title="Game Video"
+          allowfullscreen
+          allow="autoplay"
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="info-container">
+      <div class="info-text">
+        <h2 class="Title1">Hello World</h2>
+        <h2 class="Title2">A 2D Programming Educational Game</h2>
+        <p>
+          A 2D Programming Education Game designed to help students learn the
+          fundamentals of programming in a fun and engaging way. The game
+          introduces core programming concepts such as variables, loops, and
+          functions through interactive gameplay and progressively challenging
+          levels. It is tailored for beginners, making it an ideal starting
+          point for those new to coding. To accommodate different learning
+          paces, the game offers multiple levels of difficulty, allowing players
+          to progress according to their skill level. With a vibrant and
+          colorful 2D art style, the game is visually appealing and captures the
+          charm of classic 2D games. Through a variety of engaging challenges
+          and puzzles, players stay motivated and immersed while learning.
+          Overall, this game provides an enjoyable and effective approach to
+          understanding programming concepts through interactive learning.
+        </p>
+      </div>
+
+      <div class="Title3">
+        <h2>Languages Used</h2>
+        <i class="fa-brands fa-java"><p class="desc">Java</p></i>
+
+        <div class="csharp">
+          C# <br />
+          <p>C Sharp</p>
+        </div>
+      </div>
+
+      <div class="Title4">
+        <h2>Game Engine Used</h2>
+        <i class="fa-brands fa-unity"><p class="unity-desc">Unity</p></i>
+      </div>
+    </div>
+
+    <div class="info-image-container">
+      <img
+        src="Image/Project1_Symposium/Symposium.jpg"
+        onclick="openSymposiumImage(this)"
+        alt="Symposium Image"
+      />
+      <img
+        src="Image/Project1_Symposium/Symposium2.jpg"
+        onclick="openSymposiumImage(this)"
+        alt="Symposium Image"
+      />
+      <img
+        src="Image/Project1_Symposium/Symposium3.jpg"
+        onclick="openSymposiumImage(this)"
+        alt="Symposium Image"
+      />
+      <img
+        src="Image/Project1_Symposium/Symposium4.jpg"
+        onclick="openSymposiumImage(this)"
+        alt="Symposium Image"
+      />
+    </div>
+
+    <!-- Hidden overlay for zoom effect -->
+    <div id="sympImageOverlay" class="hidden"></div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>@kurt portfolio 2025</p>
+    </footer>
+  </body>
+
+  <script src="Javascript.js"></script>
+</html>
