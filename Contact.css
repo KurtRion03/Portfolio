@@ -68,6 +68,36 @@ header nav a i {
   margin-bottom: 1rem;
 }
 
+.center-wrapper {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical center */
+  background-color: black; /* for demo */
+}
+
+.contact-info {
+  font-family: Arial, sans-serif;
+  color: white;
+  padding: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 80px 10px 20px auto;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.divider {
+  color: purple;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 16px;
+}
+
 .social-containers h2 {
   font-size: 7vw; /* adjusts to screen width */
 }
