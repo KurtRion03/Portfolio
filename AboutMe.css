@@ -498,6 +498,75 @@ footer {
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
+    position: absolute;
+    top: 50px;
+    right: 40px;
+  }
+
+  .menu-icon i {
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .menu-icon i.fa-xmark {
+    transform: rotate(360deg); /* rotate when open */
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hide it initially */
+    height: 100%;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 30px;
+    transition: right 0.3s ease;
+    z-index: 999;
+
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+  }
+
+  .nav-links a {
+    margin: 15px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .nav-links a:hover {
+    color: blueviolet;
+  }
+
+  .nav-links {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    right: -40px;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.3); /* darkens it a bit */
+    z-index: 998; /* behind sidebar */
+    display: none; /* hidden by default */
+    transition: opacity 0.3s ease;
+  }
+  .overlay.active {
+    display: block;
   }
 
   .second-title {
@@ -553,30 +622,6 @@ footer {
   }
   .certificate-img {
     max-width: 100%;
-  }
-
-  nav {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px; /* adjust if header size changes */
-    right: 20px;
-    background-color: #111;
-    padding: 15px 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-  }
-
-  .nav-links a {
-    font-size: 16px;
-    margin: 10px 0;
   }
 
   .nav-links.active {

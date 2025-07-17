@@ -41,6 +41,11 @@ function openTab(evt, tabName) {
     const menuIcon = document.getElementById("menuIcon").querySelector("i");
 
     navLinks.classList.toggle("active");
+    overlay.classList.toggle("active");
+
+    // Lock or unlock body scroll
+  document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "auto";
+
 
     // Toggle icon between bars and X
     if (navLinks.classList.contains("active")) {
@@ -52,29 +57,45 @@ function openTab(evt, tabName) {
     }
   }
 
-  // For Steal And Stealth Project images
   function openStealAndStealth(imageElement) {
-    const overlay = document.getElementById('imageOverlay');
+  const overlay = document.getElementById('imageOverlay');
 
-    // Clear previous content
-    overlay.innerHTML = '';
+  // Clear previous content
+  overlay.innerHTML = '';
 
-    // Create a zoomed version of the image
-    const zoomedImage = document.createElement('img');
-    zoomedImage.src = imageElement.src;
-    zoomedImage.alt = imageElement.alt;
+  // Create zoomed image
+  const zoomedImage = document.createElement('img');
+  zoomedImage.src = imageElement.src;
+  zoomedImage.alt = imageElement.alt;
 
-    // Add image to overlay
-    overlay.appendChild(zoomedImage);
+  // Create close (X) button
+  const closeBtn = document.createElement('span');
+  closeBtn.classList.add('close-btn');
+  closeBtn.innerHTML = '&times;'; // HTML entity for ×
+  closeBtn.onclick = () => closeOverlay();
 
-    // Show overlay
-    overlay.classList.remove('hidden');
+  // Add image and close button to overlay
+  overlay.appendChild(closeBtn);
+  overlay.appendChild(zoomedImage);
 
-    // Click anywhere to close
-    overlay.onclick = () => {
-      overlay.classList.add('hidden');
-    };
+  // Show overlay
+  overlay.classList.remove('hidden');
+
+  // Lock scroll
+  document.body.style.overflow = 'hidden';
+
+  // Optional: close on clicking outside image
+  overlay.onclick = (e) => {
+    if (e.target === overlay) {
+      closeOverlay();
+    }
+  };
+
+  function closeOverlay() {
+    overlay.classList.add('hidden');
+    document.body.style.overflow = 'auto'; // Unlock scroll
   }
+}
 
    // For Symposium Project images
   function openSymposiumImage(imageElement) {
@@ -88,17 +109,34 @@ function openTab(evt, tabName) {
     zoomedImage.src = imageElement.src;
     zoomedImage.alt = imageElement.alt;
 
-    // Add image to overlay
-    overlay.appendChild(zoomedImage);
+    // Create close (X) button
+  const closeBtn = document.createElement('span');
+  closeBtn.classList.add('close-btn');
+  closeBtn.innerHTML = '&times;'; // HTML entity for ×
+  closeBtn.onclick = () => closeOverlay();
+
+    // Add image and close button to overlay
+  overlay.appendChild(closeBtn);
+  overlay.appendChild(zoomedImage);
 
     // Show overlay
     overlay.classList.remove('hidden');
 
-    // Click anywhere to close
-    overlay.onclick = () => {
-      overlay.classList.add('hidden');
-    };
+    // Lock scroll
+  document.body.style.overflow = 'hidden';
+
+    // Optional: close on clicking outside image
+  overlay.onclick = (e) => {
+    if (e.target === overlay) {
+      closeOverlay();
+    }
+  };
+
+  function closeOverlay() {
+    overlay.classList.add('hidden');
+    document.body.style.overflow = 'auto'; // Unlock scroll
   }
+}
   
 
   

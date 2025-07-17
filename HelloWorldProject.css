@@ -9,6 +9,7 @@ body {
   background-color: black;
   font-family: "Courier New", Courier, monospace;
   color: white;
+  scroll-behavior: smooth;
 }
 
 /* Header Styles */
@@ -261,6 +262,14 @@ header nav a i {
   z-index: 9999;
   opacity: 0;
   transition: opacity 0.3s ease;
+
+  /* blur effect */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+#sympImageOverlay.hidden {
+  display: none;
 }
 
 #sympImageOverlay:not(.hidden) {
@@ -270,11 +279,19 @@ header nav a i {
 #sympImageOverlay img {
   max-width: 90%;
   max-height: 90%;
-  border-radius: 10px;
-  border: 4px solid white;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease;
-  cursor: zoom-out;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Close button */
+#sympImageOverlay .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
 }
 
 /* Footer Style */
@@ -289,31 +306,42 @@ footer {
   .menu-icon {
     display: block;
     position: absolute;
-    top: 50px;
+    top: 40px;
     right: 40px;
   }
 
   .menu-icon i {
     color: white;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    padding: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .menu-icon i.fa-xmark {
+    transform: rotate(360deg); /* rotate when open */
   }
 
   .nav-links {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hide it initially */
+    height: 100%;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    position: absolute;
-    top: 60px;
-    right: 85px;
-    background-color: rgba(0, 0, 0, 0.95);
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    justify-content: center;
+    align-items: start;
+    padding: 30px;
+    transition: right 0.3s ease;
+    z-index: 999;
+
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
   }
 
   .nav-links a {
-    margin: 10px 0;
+    margin: 15px 0;
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -328,7 +356,24 @@ footer {
   }
 
   .nav-links.active {
-    display: flex;
+    right: -40px;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.3); /* darkens it a bit */
+    z-index: 998; /* behind sidebar */
+    display: none; /* hidden by default */
+    transition: opacity 0.3s ease;
+  }
+  .overlay.active {
+    display: block;
   }
 
   .video-container {
