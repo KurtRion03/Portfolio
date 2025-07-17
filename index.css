@@ -41,11 +41,10 @@ nav {
   background: none;
 }
 
-.logo a img {
-  width: 100px;
-  height: auto;
-  cursor: pointer;
+.logo img {
   display: block;
+  width: 80px;
+  height: auto;
 }
 
 header nav a {
