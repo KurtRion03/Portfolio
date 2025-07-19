@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -10,7 +11,23 @@ body {
   font-family: "Courier New", Courier, monospace;
   color: white;
   font-size: 1rem; /* Base = 16px */
-  scroll-behavior: smooth;
+
+  /* background image */
+  background-image: url(Image/background/nubelson-fernandes--Xqckh_XVU4-unsplash.jpg);
+  background-size: cover; /* Ensures it covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  background-attachment: fixed; /* Keeps image fixed when scrolling */
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  z-index: -1; /* Behind everything */
 }
 
 header {
@@ -79,10 +96,10 @@ header nav a i {
 }
 
 .wrapped-img img {
-  width: 80%;
+  width: 100%;
   height: auto;
-  max-width: 100%;
-  border-radius: 20%;
+  max-width: 800px;
+  border-radius: 5%;
 }
 
 .texts {
