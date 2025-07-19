@@ -14,6 +14,8 @@
     }
   }
 
+// ================================================================================ 
+
 
 function openTab(evt, tabName) {
     const tabcontents = document.getElementsByClassName("tab-contents");
@@ -35,7 +37,9 @@ function openTab(evt, tabName) {
       evt.currentTarget.classList.add("active-link");
     }
 
-    // burger menu toggle
+// ================================================================================ 
+
+// burger menu toggle
      function toggleMenu() {
     const navLinks = document.getElementById("navLinks");
     const menuIcon = document.getElementById("menuIcon").querySelector("i");
@@ -43,11 +47,11 @@ function openTab(evt, tabName) {
     navLinks.classList.toggle("active");
     overlay.classList.toggle("active");
 
-    // Lock or unlock body scroll
+// Lock or unlock body scroll
   document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "auto";
 
 
-    // Toggle icon between bars and X
+// Toggle icon between bars and X
     if (navLinks.classList.contains("active")) {
       menuIcon.classList.remove("fa-bars");
       menuIcon.classList.add("fa-xmark");
@@ -56,6 +60,8 @@ function openTab(evt, tabName) {
       menuIcon.classList.add("fa-bars");
     }
   }
+
+// ================================================================================ 
 
   function openStealAndStealth(imageElement) {
   const overlay = document.getElementById('imageOverlay');
@@ -96,6 +102,8 @@ function openTab(evt, tabName) {
     document.body.style.overflow = 'auto'; // Unlock scroll
   }
 }
+
+// ================================================================================ 
 
    // For Symposium Project images
   function openSymposiumImage(imageElement) {
